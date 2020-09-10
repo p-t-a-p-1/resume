@@ -1,10 +1,15 @@
 <template>
   <div>
-    <Nuxt />
+    <header class="header">
+      <common-nav></common-nav>
+    </header>
+    <main class="main">
+      <Nuxt />
+    </main>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -15,6 +20,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  text-align: center;
+  color: #2c3e50;
 }
 
 *,
@@ -24,32 +31,35 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  width: 300px;
+  min-height: 100%;
+  height: 100%;
+  background-color: #2c3e50;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.main {
+  position: relative;
+  clear: both;
+  text-align: left;
+  margin: 15px 15px 15px 315px;
+  padding: 50px 30px;
+  width: calc(100% - 400px);
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+ul {
+  list-style-type: none;
 }
 </style>
+
+<script>
+import commonNav from '../components/commonNav.vue'
+export default {
+  components: {
+    commonNav,
+  },
+}
+</script>

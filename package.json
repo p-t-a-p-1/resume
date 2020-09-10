@@ -23,7 +23,9 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "sass-loader": "^10.0.2"
   }
 }
