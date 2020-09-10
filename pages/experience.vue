@@ -101,8 +101,6 @@ ul {
 </style>
 
 <script>
-import Vue from 'vue'
-import MagicGrid from 'vue-magic-grid'
 export default {
   name: 'Experience',
   data() {
@@ -212,5 +210,4 @@ export default {
     }
   },
 }
-Vue.use(MagicGrid)
 </script>
